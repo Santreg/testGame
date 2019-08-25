@@ -17,9 +17,12 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.touchCount > 0)
         {
-            Vector2 fingerPos = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
+            //android touch
+           /* Vector2 fingerPos = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
             if(transform.position.x < fingerPos.x) rb.AddForce(Vector2.right * force, ForceMode2D.Force);
-            else rb.AddForce(Vector2.left * force, ForceMode2D.Force);
+            else rb.AddForce(Vector2.left * force, ForceMode2D.Force);*/
+            // PC Check
+
         }
     }
 
