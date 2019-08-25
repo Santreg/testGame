@@ -24,10 +24,18 @@ public class PlayerController : MonoBehaviour
             // PC Check
 
         }
+
+        if (Input.GetKey(KeyCode.Mouse0))
+        {
+            Vector2 fingerPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            if (transform.position.x < fingerPos.x) rb.AddForce(Vector2.right * force, ForceMode2D.Force);
+            else rb.AddForce(Vector2.left * force, ForceMode2D.Force);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D other)
     {
         rb.AddForce(Vector2.up*force, ForceMode2D.Impulse);
+        GameController.Instance.IncrScore();
     }
 }

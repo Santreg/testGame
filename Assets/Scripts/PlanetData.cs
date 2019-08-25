@@ -8,4 +8,8 @@ public class PlanetData : ScriptableObject
     Color color;
     [SerializeField]
     float gravity;
+
+
+    public Color Col { get { return color; } }
+    public float Gravity { get { return gravity; } }
 }
