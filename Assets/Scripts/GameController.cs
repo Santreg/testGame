@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class GameController : MonoBehaviour
+public class GameController : MonoBehaviour,IPointerDownHandler
 {
     // Start is called before the first frame update
 
@@ -46,10 +47,11 @@ public class GameController : MonoBehaviour
     public void StartEarthLevel()
     {
         menu.gameObject.SetActive(false);
-        scoreText.gameObject.SetActive(false);
+        //scoreText.gameObject.SetActive(false);
         platforms.gameObject.SetActive(true);
 
-        
+        var ball = Instantiate(ballPrefab);
+
 
         Physics.gravity = new Vector3(0, earth.Gravity,0);
         Camera.main.backgroundColor = earth.Col;
@@ -57,7 +59,7 @@ public class GameController : MonoBehaviour
     public void StartMoonLevel()
     {
         menu.gameObject.SetActive(false);
-        scoreText.gameObject.SetActive(false);
+       // scoreText.gameObject.SetActive(false);
         platforms.gameObject.SetActive(true);
 
         var ball = Instantiate(ballPrefab);
@@ -69,7 +71,7 @@ public class GameController : MonoBehaviour
     public void StartJupiterLevel()
     {
         menu.gameObject.SetActive(false);
-        scoreText.gameObject.SetActive(false);
+        //scoreText.gameObject.SetActive(false);
         platforms.gameObject.SetActive(true);
 
         var ball = Instantiate(ballPrefab);
@@ -92,5 +94,8 @@ public class GameController : MonoBehaviour
         instanceBall = ball;
     }
 
-    
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        
+    }
 }

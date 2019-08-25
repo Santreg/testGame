@@ -37,5 +37,8 @@ public class PlayerController : MonoBehaviour
     {
         rb.AddForce(Vector2.up*force, ForceMode2D.Impulse);
         GameController.Instance.IncrScore();
+
+        if(other.gameObject.tag !="1") other.gameObject.GetComponent<SpriteRenderer>().color = RandomColor();
     }
+    Color RandomColor() => Random.ColorHSV();
 }
