@@ -93,9 +93,20 @@ public class GameController : MonoBehaviour,IPointerDownHandler
         var ball = Instantiate(ballPrefab);
         instanceBall = ball;
     }
+    void StartLvl(PlanetData data)
+    {
+        Physics.gravity = new Vector3(0, data.Gravity, 0);
+        Camera.main.backgroundColor = data.Col;
+        menu.gameObject.SetActive(false);
+        platforms.gameObject.SetActive(true);
+        var ball = Instantiate(ballPrefab);
 
+    }
     public void OnPointerDown(PointerEventData eventData)
     {
-        
+        if(eventData.currentInputModule.gameObject.name == "Earth")
+        {
+
+        }
     }
 }
