@@ -44,42 +44,7 @@ public class GameController : MonoBehaviour,IPointerDownHandler
 
         scoreText.text = score.ToString();
     }
-    public void StartEarthLevel()
-    {
-        menu.gameObject.SetActive(false);
-        //scoreText.gameObject.SetActive(false);
-        platforms.gameObject.SetActive(true);
-
-        var ball = Instantiate(ballPrefab);
-
-
-        Physics.gravity = new Vector3(0, earth.Gravity,0);
-        Camera.main.backgroundColor = earth.Col;
-    }
-    public void StartMoonLevel()
-    {
-        menu.gameObject.SetActive(false);
-       // scoreText.gameObject.SetActive(false);
-        platforms.gameObject.SetActive(true);
-
-        var ball = Instantiate(ballPrefab);
-
-
-        Physics.gravity = new Vector3(0, moon.Gravity, 0);
-        Camera.main.backgroundColor = moon.Col;
-    }
-    public void StartJupiterLevel()
-    {
-        menu.gameObject.SetActive(false);
-        //scoreText.gameObject.SetActive(false);
-        platforms.gameObject.SetActive(true);
-
-        var ball = Instantiate(ballPrefab);
-
-
-        Physics.gravity = new Vector3(0, jupiter.Gravity, 0);
-        Camera.main.backgroundColor = jupiter.Col;
-    }
+  
     public void Back() {
         Camera.main.backgroundColor = menuColor;
         menu.gameObject.SetActive(true);
