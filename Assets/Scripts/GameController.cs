@@ -30,11 +30,13 @@ public class GameController : MonoBehaviour/*,IPointerDownHandler*/
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+
+       if (Input.GetKeyDown(KeyCode.Escape))
         {
             Back();
         }
     }
+
     public void IncrScore() {
         score++;
 
