@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 35791714}
   - component: {fileID: 35791713}
   m_Layer: 5
-  m_Name: Moon
+  m_Name: Button (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -202,8 +202,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
+      - m_Target: {fileID: 519420030}
+        m_MethodName: StartMoonLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: 46483353}
   m_Layer: 0
   m_Name: PlatformWhiteSprite (3)
-  m_TagString: 1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -395,7 +395,7 @@ GameObject:
   - component: {fileID: 346002761}
   - component: {fileID: 346002760}
   m_Layer: 5
-  m_Name: Jupiter
+  m_Name: Button (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -464,8 +464,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
+      - m_Target: {fileID: 519420030}
+        m_MethodName: StartJupiterLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -561,7 +561,6 @@ MonoBehaviour:
   menuColor: {r: 0.8784314, g: 0.8784314, b: 0.8784314, a: 0}
   score: 0
   scoreText: {fileID: 1662951929}
-  instanceBall: {fileID: 0}
   platforms: {fileID: 2034310646}
   ballPrefab: {fileID: 3608311538864810379, guid: 420e0a2f033d4e947b9905a95c1f9bcd,
     type: 3}
@@ -1462,7 +1461,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2034310646
 Transform:
   m_ObjectHideFlags: 0
@@ -1494,7 +1493,7 @@ GameObject:
   - component: {fileID: 2045849733}
   - component: {fileID: 2045849732}
   m_Layer: 5
-  m_Name: Earth
+  m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1563,8 +1562,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
+      - m_Target: {fileID: 519420030}
+        m_MethodName: StartEarthLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
