@@ -69,9 +69,9 @@ public class GameController : MonoBehaviour,IPointerDownHandler
     }
     public void OnPointerDown(PointerEventData eventData)
     {
-        if(eventData.currentInputModule.gameObject.name == "Earth")
-        {
+        if (eventData.currentInputModule.gameObject.name == "Earth") StartLvl(earth);
+        else if(eventData.currentInputModule.gameObject.name == "Moon") StartLvl(moon);
+        else StartLvl(jupiter);
 
-        }
     }
 }
