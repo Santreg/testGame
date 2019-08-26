@@ -8,13 +8,6 @@ public class GameController : MonoBehaviour/*,IPointerDownHandler*/
 {
     // Start is called before the first frame update
 
-
-
-    [SerializeField]
-    public PlanetData earth;
-    public PlanetData moon;
-    public PlanetData jupiter;
-
     public Transform menu;
     public Color menuColor;
     public int score;
@@ -51,7 +44,6 @@ public class GameController : MonoBehaviour/*,IPointerDownHandler*/
     public void Back() {
         Camera.main.backgroundColor = menuColor;
         menu.gameObject.SetActive(true);
-        scoreText.gameObject.SetActive(true);
         platforms.gameObject.SetActive(false);
 
          Destroy(instanceBall);
