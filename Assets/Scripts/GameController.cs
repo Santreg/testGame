@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class GameController : MonoBehaviour,IPointerDownHandler
+public class GameController : MonoBehaviour/*,IPointerDownHandler*/
 {
     // Start is called before the first frame update
 
@@ -58,7 +58,7 @@ public class GameController : MonoBehaviour,IPointerDownHandler
         var ball = Instantiate(ballPrefab);
         instanceBall = ball;
     }
-    void StartLvl(PlanetData data)
+    public void StartLvl(PlanetData data)
     {
         Physics.gravity = new Vector3(0, data.Gravity, 0);
         Camera.main.backgroundColor = data.Col;
@@ -67,11 +67,5 @@ public class GameController : MonoBehaviour,IPointerDownHandler
         var ball = Instantiate(ballPrefab);
 
     }
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        if (eventData.currentInputModule.gameObject.name == "Earth") StartLvl(earth);
-        else if(eventData.currentInputModule.gameObject.name == "Moon") StartLvl(moon);
-        else StartLvl(jupiter);
-
-    }
+   
 }

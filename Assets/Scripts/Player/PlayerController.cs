@@ -31,6 +31,11 @@ public class PlayerController : MonoBehaviour
             if (transform.position.x < fingerPos.x) rb.AddForce(Vector2.right * force, ForceMode2D.Force);
             else rb.AddForce(Vector2.left * force, ForceMode2D.Force);
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            GameController.Instance.Back();
+        }
     }
 
     void OnCollisionEnter2D(Collision2D other)
