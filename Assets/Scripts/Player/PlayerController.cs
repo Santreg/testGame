@@ -15,15 +15,14 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.touchCount > 0)
+
+       /* if (Input.touchCount > 0)
         {
             //android touch
-           /* Vector2 fingerPos = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
+            Vector2 fingerPos = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
             if(transform.position.x < fingerPos.x) rb.AddForce(Vector2.right * force, ForceMode2D.Force);
-            else rb.AddForce(Vector2.left * force, ForceMode2D.Force);*/
-            // PC Check
-
-        }
+            else rb.AddForce(Vector2.left * force, ForceMode2D.Force);
+        }*/
 
         if (Input.GetKey(KeyCode.Mouse0))
         {
