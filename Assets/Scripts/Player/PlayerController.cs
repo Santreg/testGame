@@ -32,10 +32,7 @@ public class PlayerController : MonoBehaviour
             else rb.AddForce(Vector2.left * force, ForceMode2D.Force);
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            GameController.Instance.Back();
-        }
+       
     }
 
     void OnCollisionEnter2D(Collision2D other)
