@@ -39,7 +39,7 @@ public class GameController : MonoBehaviour/*,IPointerDownHandler*/
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            GameController.Instance.Back();
+            Back();
         }
     }
     public void IncrScore() {
